@@ -28,6 +28,8 @@
     "@clerk/express": "^1.7.37",
     "@types/mongoose": "^5.11.96",
     "express": "^5.1.0",
-    "mongoose": "^8.19.0"
+    "mongoose": "^8.19.0",
+    "svix": "^1.77.0",
+    "zod": "^4.1.12"
   }
 }

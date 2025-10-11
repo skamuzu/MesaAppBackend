@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var dotenv = require("dotenv");
+dotenv.config();
+var express_1 = require("express");
+var express_2 = require("@clerk/express");
+var clerkWebhookRoutes_1 = require("./routes/clerkWebhookRoutes");
+var app = (0, express_1.default)();
+var port = process.env.PORT || 3000;
+app.use(express_1.default.json());
+app.use((0, express_2.clerkMiddleware)());
+app.use('/clerk', clerkWebhookRoutes_1.default);
+app.listen(port);
+exports.default = app;
