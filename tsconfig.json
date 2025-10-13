@@ -10,7 +10,12 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "allowSyntheticDefaultImports": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "types": [
+      "node",
+      "express"
+    ],
+    "lib": ["ES2020"]
   },
   "include": [
     "src/**/*",

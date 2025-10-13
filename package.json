@@ -25,8 +25,11 @@
     "typescript": "^5.9.3"
   },
   "dependencies": {
+    "@clerk/backend": "^2.17.2",
     "@clerk/express": "^1.7.37",
+    "@types/body-parser": "^1.19.6",
     "@types/mongoose": "^5.11.96",
+    "body-parser": "^2.2.0",
     "express": "^5.1.0",
     "mongoose": "^8.19.0",
     "svix": "^1.77.0",
