@@ -8,10 +8,9 @@ export const clerkUserSchema = z.object({
     last_name: z.string().nullable().optional(),
     email_addresses: z.array(
       z.object({
-        email_address: z.string().email(),
+        email_address: z.email(),
       }).loose()
     ),
-    primary_email_address_id: z.string().nullable().optional(),
   }).loose(),
 }).loose();
 
