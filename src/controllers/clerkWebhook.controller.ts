@@ -14,13 +14,11 @@ export class ClerkWebhookController {
       if (eventType === "user.created") {
         await ClerkWebhookService.createUserFromClerk(evt);
       }
-
-      //@ts-ignore
+      
       res.status(200).send("OK");
     } catch (error) {
       console.error("Webhook handling error:", error);
 
-      //@ts-ignore
       res.status(500).send("Internal Server Error");
     }
   }

@@ -16,6 +16,6 @@ export const enrollments = pgTable(
     enrolledAt: timestamp("enrolled_at").defaultNow().notNull(),
   },
   (table) => ({
-    pk: primaryKey({ columns: [table.userId, table.courseId] }), // composite PK
+    pk: primaryKey({ columns: [table.userId, table.courseId] }),
   })
 );
