@@ -1,12 +1,11 @@
-import 'dotenv/config';
-import { drizzle } from 'drizzle-orm/node-postgres';
+import { drizzle } from 'drizzle-orm/postgres-js'
+import postgres from 'postgres'
 
-// You can specify any property from the node-postgres connection options
-const db = drizzle({ 
-  connection: { 
-    connectionString: process.env.DATABASE_URL!,
-    ssl: { rejectUnauthorized: false}
-  },
-});
+
+const connectionString = process.env.DATABASE_URL!
+
+// Disable prefetch as it is not supported for "Transaction" pool mode
+const client = postgres(connectionString, { prepare: false })
+const db = drizzle(client);
 
 export default db;
